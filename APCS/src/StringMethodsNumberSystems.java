@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class StringMethodsNumberSystems {
 	public static void main(String args[]){
-	System.out.println("");
+	System.out.println("Mandatory or optional? \n");
 	choose();	
 	}
 	
@@ -16,10 +16,12 @@ public class StringMethodsNumberSystems {
 		switch(options.nextLine().toLowerCase()){
 		case "mandatory": {
 			switch(options.nextInt()){
-			case 1: System.out.println("Hay"); break;
-			case 2: System.out.println("Neigh"); break;
-			case 3: System.out.println("Sleigh"); break;
-			case 4: System.out.println("Yay"); break;
+			case 1: allMethods.compareTo(); break;
+			case 2: allMethods.equals(); break;
+			case 3: allMethods.length(); break;
+			case 4: allMethods.substring(); break;
+			case 5: allMethods.indexOf(); break;
+			default: System.out.println("You're stupid.");
 				}  
 		}
 		break;
@@ -35,10 +37,49 @@ public class StringMethodsNumberSystems {
 		}
 		
 		
-		}
+		options.close();	
+	}
 	}
 
-	
+	class allMethods{
+		
+		public static void compareTo(){
+			System.out.println("compareTo takes two strings and inputs the difference in the number value"
+					+ "of the first different character.");
+			String lol = "That's funny!";
+			String um = "You're weird";
+			String lolz = "That's funny!";
+			String ok = "That's dad!";
+			
+			System.out.println(lol.compareTo(um));
+			System.out.println(lol.compareTo(lolz));
+			System.out.println(lol.compareTo(ok));
+			
+		}
+		
+		public static void equals(){
+			
+		}
+		
+		public static void length(){
+			
+		}
+		
+		public static void substring(){
+			String iAngry = "He always takes everything out of context!";
+			System.out.println(iAngry);
+			System.out.println(iAngry.substring(0, 26) + "!");
+		}
+		
+		public static void indexOf(){
+			String findMe = "Felicia, Amber, Alice, Sasha";
+			System.out.println("Alice: Where is my name?");
+			System.out.println("Lexi: Your name can be found on " + findMe.indexOf("Alice"));
+			System.out.println("Lexi: What about me? Where am I?");
+			if (findMe.indexOf("Lexi") == -1) System.out.println("Alice: Sorry, you're not on there. :(");
+			else System.out.println("Alice: You're on " + findMe.indexOf("Lexi"));
+		}
+	}
  /*public static void main(String args[]){
 	allTogetherNow();
 	subStrings();
