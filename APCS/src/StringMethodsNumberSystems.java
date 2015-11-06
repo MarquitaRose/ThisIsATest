@@ -14,7 +14,9 @@ public class StringMethodsNumberSystems {
 
 		
 		switch(options.nextLine().toLowerCase()){
-		case "mandatory": {
+		case "mandatory":
+		System.out.println(" 1. compareTo \n 2. equals \n 3. length \n 4. substring \n 5. indexOf");
+		{
 			switch(options.nextInt()){
 			case 1: allMethods.compareTo(); break;
 			case 2: allMethods.equals(); break;
@@ -27,9 +29,12 @@ public class StringMethodsNumberSystems {
 		break;
 		case "optional": {
 			switch(options.nextInt()){
-			case 1: System.out.println("more"); break;
-			case 2: System.out.println("Bore"); break;
-			case 3: System.out.println("chore"); break;
+			case 1: allMethods.concat(); break;
+			case 2: allMethods.charAt(); break;
+			case 3: allMethods.replace(); break;
+			case 4: allMethods.upDown(); break;
+			case 5: allMethods.valueOf(); break;
+			case 6: allMethods.trim(); break;
 			}
 		}
 		break;
@@ -58,12 +63,56 @@ public class StringMethodsNumberSystems {
 		}
 		
 		public static void equals(){
+			System.out.println("UNDER CONSTRUCTION");
+			String oddball = "Lizard";
 			
+			if (oddball == "Lizard") System.out.println(oddball + " equals Lizard" );
+			else System.out.println(oddball + " does not equal Lizard");
+			
+			if (oddball.equals("Lizard")) System.out.println(oddball + " equals Lizard");
+			else System.out.println(oddball + " does not equal Lizard");
 		}
 		
 		public static void length(){
+			System.out.println("Not quite.");
+			int vary[] = {3, 8, 5, 3, 9};
+			for (int x = 0; x< vary.length; x++){
+				System.out.print(vary[x] + " ");
+			}
+		}
+		public static void trim() {
+			// TODO Auto-generated method stub
 			
 		}
+
+		public static void upDown() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public static void valueOf() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public static void replace() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public static void charAt() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public static void concat() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		
+		
+		
 		
 		public static void substring(){
 			String iAngry = "He always takes everything out of context!";
