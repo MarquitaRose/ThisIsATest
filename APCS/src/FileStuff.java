@@ -1,4 +1,8 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -6,6 +10,7 @@ public class FileStuff {
 	public static void main(String args[]) throws IOException{
 		File stuffs = new File("FileStuffs.dat");
 		File noStuffs = new File("Woofs.dat");
+		BufferedReader reed = new BufferedReader(new FileReader(stuffs));
 		
 		System.out.println("Does the first file exist?");
 		if (stuffs.exists()) System.out.println("Yes boss. " +stuffs.getName() + " exists.\n");
@@ -29,6 +34,10 @@ public class FileStuff {
 		System.out.println("Can I edit it?");
 		if(stuffs.canWrite()) System.out.println("Yes. \n");
 		else System.out.println("No. \n");
+
+
+		System.out.println("Read it to me.");
+		
 		
 		System.out.println("This is supid.");
 		stuffs.delete();
@@ -39,5 +48,13 @@ public class FileStuff {
 		
 		stuffs.createNewFile();
 		System.out.println("This is a much better file.");
+		
+		
+		BufferedWriter improvement = new BufferedWriter(new FileWriter(stuffs));
+		improvement.write("I like umpa loompas");
+		improvement.newLine();
+		improvement.write("Ewww your feet smell!");
+		
+		
 	}
 }
