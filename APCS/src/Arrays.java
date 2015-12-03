@@ -92,7 +92,6 @@ public class Arrays {
 		bob.add("for apples");
 		bob.add("for eyeballs");
 		bob.add("for Bobs");
-		bob.add("for humans!");
 		
 		System.out.println("You can bob " +bob);
 		/////The size method takes the number of elements in the array. LENGTH DOES NOT WORK!\\\\\
@@ -104,14 +103,31 @@ public class Arrays {
 		System.out.println("Correct! We're going to add one more: bob for threes.");
 		/////set (index, object) THis only puts the object in this index; the 
 		/////elements do not have an index location yet\\\\\
-		bob.set(2, "for plasic fishes");
+		bob.add(2, "for plasic fishes");
 		
+		/////add method adds an element at desired index; set method changes the value of the index to 
+		///// what is being changed\\\\\
 		System.out.println("You can bob " + bob);
-		
+		bob.set(2, "for humans!");
+		System.out.println("You can bob " + bob);
 		System.out.println("Wait a sec. That doesn't look right.");
 		//////the remove method removes an object at the stated index location and decreases the array size\\\\
-		bob.remove(3);
+		bob.remove(2);
 		
 		System.out.println("Okay, once again, you can bob " +bob);
+		System.out.println("I only want to bob for " + bob.get(2));
+		
+		/* AP tested methods
+		int size()
+		boolean add(E obj) 
+		void add(int index, E obj) 
+		E get(int index) 
+		E set(int index, E obj) 
+		E remove(int index)
+				In the method headings above E is the data type of the Element 
+			that is added or returned. 
+			The ArrayList class is also tested on the AP exam and will be 
+			tested as implementing the six methods of the List interface.
+		 */
 	}
 }
