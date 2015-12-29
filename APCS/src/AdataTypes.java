@@ -1,5 +1,6 @@
          //\\AP ALERT! The int, double, boolean and String data types will be tested.\\//
          //\\The byte, short, long, float and char data types will NOT be tested.\\//
+
 /////Reserved words are part of the Java language the same way that table, walk and \\\\\
           ////mother are part of the English language.\\\\\
 
@@ -10,34 +11,39 @@
                            /////but not a equals 10.\\\\\
 
 
-////byte 1 -128 . . . 127 \\\\\
+////byte         1       -128 . . . 127 \\\\\
 
-/////short 2 -32,768 . . . 32,767\\\\\ 
+/////short       2       -32,768 . . . 32,767\\\\\ 
 
-/////int 4 -2,147,483,648 . . . 2,147,483,647 \\\\
+/////int         4       -2,147,483,648 . . . 2,147,483,647 \\\\
 
-/////long 8 -9,223,372,036,854,775,808 - 9,223,372,036,854,775,807\\\\\
+/////long        8       -9,223,372,036,854,775,808 - 9,223,372,036,854,775,807\\\\\
 
 
-public class DataTypes {
+public class AdataTypes {
 	public static void main (String args[]){
 		primitiveDataTypes();
 		mathShortcuts();
 		charStringBoolean();
 		learnFinal();
 		typeCasting();
+		escapeSequences();
 	}
 	
 	public static void primitiveDataTypes(){
+/////A simple data type, also called a primitive data type, is simple because it stores a single 
+	                  	/////value in memory\\\\\
+
+/////Data types are declared so that the computer can save enough memory space to store the value\\\\\		
 	int one;
 	one =1;
 	byte two = 2;
 	short what = 44;
 	
-	////byte addition = one + two; will not work. You must make it an int or have it as displayed below\\\\\
-	////^^same with short \\\\\
-	//byte addition = (byte) (one + two);
-	////as shown above, the initial variable can be declared in byte or short. However, defining it with 
+////byte addition = one + two; will not work. You must make it an int or have it as displayed below\\\\\
+////^^same with short \\\\\
+//byte addition = (byte) (one + two);
+////as shown above, the initial variable can be declared in byte or short. However, defining it with\\\\ 
 	          ////other predefined variables does not work\\\\
 	
 	int addition = one + two;
@@ -53,9 +59,12 @@ public class DataTypes {
 	System.out.println("2 / 1 = " + division);
 	System.out.println("3 / 2 has a remainder of " + remainder);
 	
-	/////It works the same with doubles too! Doubles are numbers with decimal points \\\\
-	                /////(think "double the precision")\\\\\ 
 	
+	            
+/////There are two real-number data types: float (4 bytes) and double (8 bytes). 
+	/////float is short for floating point number and double has twice the precision.\\\\\
+
+/////The math works with doubles too (with the exception of modulus division)! \\\\	
 	double no = 3;
 	System.out.println("\n no = " +no);
 	
@@ -118,11 +127,14 @@ public class DataTypes {
 	x %= 10; 
 	System.out.println("x equals " + x);
 	System.out.println();
+	
+///// Remember the PEMDAS rule for order of operations? It applies to computations made on the computer too
 	}
 	
 	public static void charStringBoolean(){
 	
 ////A char is used to process a single character. A String is used for one or more sets of characters.\\
+		/////Note: A String is not a simple data type, though at this point it is treated as one.\\\\\
 	
 	char ai = 'A';
 	char be = 'B';
@@ -173,5 +185,20 @@ public class DataTypes {
 ///// find the (double) average of (int) 1, 3, and 6. The answer given would be 3.0. That's not right!
 /////The reason is because the computer sees theses as ints and computes as ints. If we want it to 
 /////compute as a double, we have to put (double) in front of it, like above.
+	}
+	
+	
+	public static void escapeSequences(){
+/////An escape sequence is a single slash followed by some character placed between double quotes.\\\\\
+		
+		System.out.print("Line one; print not println");
+		System.out.println("\n<--- That\\n performs a carriage return and line feed; in other words"
+				+ " its like an enter key.");
+		System.out.println("\t<--- That\\t performs a horizontal tab.");
+		//System.out.print("<--- That \\r performs a carriage return without a line feed;"
+		//		+ " the output will not be displayed.\r");
+		System.out.println("\\<--- That double slashing returns a single slash.");
+		System.out.println("\"<--- That returns double quotes.");
+		
 	}
 }
