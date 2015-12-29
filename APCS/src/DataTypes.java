@@ -1,3 +1,5 @@
+         //\\AP ALERT! The int, double, boolean and String data types will be tested.\\//
+         //\\The byte, short, long, float and char data types will NOT be tested.\\//
 /////Reserved words are part of the Java language the same way that table, walk and \\\\\
           ////mother are part of the English language.\\\\\
 
@@ -19,6 +21,14 @@
 
 public class DataTypes {
 	public static void main (String args[]){
+		primitiveDataTypes();
+		mathShortcuts();
+		charStringBoolean();
+		learnFinal();
+		typeCasting();
+	}
+	
+	public static void primitiveDataTypes(){
 	int one;
 	one =1;
 	byte two = 2;
@@ -71,7 +81,10 @@ public class DataTypes {
 
 	intNum = intNum * 1000; 
 	System.out.println("intNum: " + intNum);
+	System.out.println("");
+	}
 	
+	public static void mathShortcuts(){
 	
 /////Java unary operators are as follows:\\\\\
 	///// x++     x = x+1;
@@ -80,7 +93,7 @@ public class DataTypes {
 		/////      put in an output display, and placing them after would increase/decrease 
 	    /////      after displaying (postfix). Placing the shortcut in an output display is improper use.
 	
-	///// x+= 10; x = x+10;
+	/////x+= 10; x = x+10;
 	/////x -= 10  x = x-10;
 	/////x*=10    x = x*10;
 	/////x/=10   x = x/10;
@@ -88,7 +101,7 @@ public class DataTypes {
 	
 	int x = 10; 
 
-	System.out.println("\nx equals " + x); 
+	System.out.println("x equals " + x); 
 
 	x += 10; 
 	System.out.println("x equals " + x); 
@@ -105,8 +118,9 @@ public class DataTypes {
 	x %= 10; 
 	System.out.println("x equals " + x);
 	System.out.println();
+	}
 	
-	
+	public static void charStringBoolean(){
 	
 ////A char is used to process a single character. A String is used for one or more sets of characters.\\
 	
@@ -123,6 +137,41 @@ public class DataTypes {
 	String hi = "Hello";
 	String wald = "World";
 	String together = hi+wald;
-	System.out.println(together );
+	System.out.println(together);
+	
+	
+	
+	
+/////The boolean data type can have two values: true or false. They are declared like the rest:\\\\\
+	///// boolean yeah = true;     or boolean yeah = false;\\\\\
+	
+/////Declaring a constant is much like declaring a variable; however, the word final is added\\\\\
+	}
+	
+	public static void learnFinal(){
+	final int lifeUniverseAnything = 42;
+	System.out.println("\nThe answer to life, the universe, and anything is " + lifeUniverseAnything);
+	//lifeUniverseAnything = 27;
+	//System.out.println("The answer has changed; it is now " + lifeUniverseAnything);
+	}
+	
+	public static void typeCasting(){
+                /////It's magic! Watch and learn ;)\\\\\
+	int intVal    = 65; 
+	double dblVal = 70.1; 
+	char chrVal  = 'B';
+
+	System.out.println("(double) intVal 65    becomes " + (double) intVal); 
+	System.out.println("(char)   intVal 65      becomes " + (char) intVal);
+	System.out.println("(int)    dblVal 70.1    becomes " + (int) dblVal);
+	System.out.println("(char)   dblVal 70.1  becomes " + (char) dblVal);
+	System.out.println("(int)    chrVal B         becomes " + (int) chrVal); 
+	System.out.println("(double) chrVal B     becomes " + (double) chrVal); 
+	System.out.println();
+	
+/////Type casting is basically manipulating the data into the type you need it in. Say you're trying to
+///// find the (double) average of (int) 1, 3, and 6. The answer given would be 3.0. That's not right!
+/////The reason is because the computer sees theses as ints and computes as ints. If we want it to 
+/////compute as a double, we have to put (double) in front of it, like above.
 	}
 }
