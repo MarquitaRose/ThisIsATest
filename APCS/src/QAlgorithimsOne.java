@@ -1,12 +1,13 @@
 
 
-
-        /////An algorithim is a step-by-step problem to a solution.\\\\\
+    /////An algorithim is a step-by-step problem to a solution.\\\\\
 
                     /////Data Structures + Algorithms = Programs (Nikclaus Wirth)\\\\\
 
 
     import java.util.Random;
+
+import java.util.Scanner;
 
 
     
@@ -22,37 +23,63 @@
 
     {
 
-    List1 array1 = new List1(10); 
+        List3 array1 = new List3(60,100,200); 
 
-    array1.display();
 
-    List1 array2 = new List1(10,999); 
+        array1.display();
 
-    array2.display();
 
-    array2.assign();
+        array1.pause();
 
-    array2.display();
 
-    System.out.println();
+        List3 array2 = new List3(100,100,999); 
+
+
+        array2.display();
+
+
+        array2.pause();
+
+
+        List3 array3 = new List3(200,10,19); 
+
+
+        array3.display();
+
+
+        array3.pause();
+
+
+        List3 array4 = new List3(40,500,505); 
+
+
+        array4.display();
+
+
+        array4.pause();
+
+
+        System.out.println();
 
     }
 
     }
 
 
-    class List1
+    class List3
 
     { 
 
-    private int intArray[]; // stores array elements
+        private int intArray[]; // stores array elements 
 
-    private int size; // number of elements in the array
+        private int size;  // number of elements in the array 
 
-       
+        private int minInt;  // smallest random integer 
+
+        private int maxInt;  // largest random integer
 
 
-    public List1(int s) 
+    public List3(int s) 
 
     { 
 
@@ -65,7 +92,7 @@
     } 
 
 
-    public List1(int s, int n) 
+    public List3(int s, int n) 
 
     { 
 
@@ -82,6 +109,43 @@
 
     } 
 
+
+    
+
+    public List3(int s, int min, int max) 
+
+
+    { 
+
+
+    Random rndInt = new Random(12345);   
+
+
+    minInt = min; 
+
+
+    maxInt = max; 
+
+
+    size = s; 
+
+
+    System.out.println("\nCONSTRUCTING LIST WITH VALUES in [" + minInt + ".." + maxInt + "] range"); 
+
+
+    intArray = new int[size]; 
+
+
+    int range = maxInt - minInt + 1; 
+
+
+    for (int k = 0; k < size; k++) 
+
+
+    intArray[k] = rndInt.nextInt(range) + minInt; 
+
+
+    }
 
     public void assign() 
 
@@ -105,16 +169,38 @@
 
     { 
 
-    System.out.println("\nDISPLAYING ARRAY ELEMENTS"); 
+        System.out.println("\nDISPLAYING ARRAY ELEMENTS");
 
-    for (int k = 0; k < size; k++) 
+        for (int k = 0; k < size; k++) 
 
-    System.out.print(intArray[k] + "  "); 
+        System.out.print(intArray[k] + "  ");
 
-    System.out.println();
+        System.out.println();
 
     } 
 
+
+    
+
+    public void pause() 
+
+
+    {   
+
+
+    Scanner input = new Scanner(System.in);  
+
+
+    String dummy; 
+
+
+    System.out.print("\nPress <Enter> to continue  ===>>  "); 
+
+
+    dummy = input.nextLine(); 
+
+
+    }
 
       
 
