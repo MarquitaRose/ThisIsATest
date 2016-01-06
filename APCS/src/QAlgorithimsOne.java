@@ -21,6 +21,15 @@ import java.util.Scanner;
         array.display();
         array.pause();
         System.out.println();
+        
+        System.out.println("Enter the number you are searching for.");
+        int search = putin.nextInt();
+        
+        int index = array.linearSearch(search);
+        if(index == -1)
+        	System.out.println(search + " is not in the list.");
+        else
+        	System.out.println(search + " is found at index " + index);
 
     }
 
@@ -110,7 +119,22 @@ import java.util.Scanner;
    }
 
       
-
+    public int linearSearch(int sn){
+    	boolean found = false;
+    	int k = 0;
+    	while(k<size &&!found)
+    	{
+    		if (intArray[k]==sn)
+    			found = true;
+    		else k++;
+    	}
+    	
+    	if (found)
+    		return k;
+    	else
+    	return -1;
+    }
+    
 }
 
 
