@@ -3,6 +3,8 @@
                     /////Data Structures + Algorithms = Programs (Nikclaus Wirth)\\\\\
 
 import java.util.Random;
+/////This is one example of the thought process of a certain algorithm. Another one used was the Bubble sort. \\\\\
+
 import java.util.Scanner;
 
     public class QAlgorithimsOne{
